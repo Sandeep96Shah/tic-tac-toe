@@ -34,6 +34,20 @@ const Game = styled.div`
   align-items: center;
   height: 80vh;
   width: 100vw;
+  .container {
+    padding: 20px;
+    display: flex;
+    border: 1px solid grey;
+    border-radius: 10px;
+    box-shadow: 0px 0px 8px 1px grey;
+  }
+  @media only screen and (max-width: 550px) {
+    .container {
+      flex-direction: column;
+      position: relative;
+      top: 85px;
+    }
+  }
 `;
 
 const Header = styled.p`
@@ -124,7 +138,6 @@ class App extends Component {
     const winner = this.calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
-      //console.log("8888", step, move);
       const detail = move ? "Go to move #" + move : "Go to game start";
       return (
         <li key={move} style={{ marginBottom: 1 }}>
