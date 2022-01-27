@@ -3,12 +3,21 @@ import Board from "./Board";
 import styled from "styled-components";
 
 const BoardContainer = styled.div`
-  height: 250px;
+  height: 270px;
   width: 200px;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  @media only screen and (max-width: 550px) {
+    width: 300px;
+    height: 210px;
+    flex-direction: column;
+  }
 `;
 
 const BoardMoves = styled.div`
-  height: 250px;
+  height: 270px;
   width: 250px;
   h2 {
     margin: 0 0 10px 25px;

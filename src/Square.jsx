@@ -5,11 +5,7 @@ class Square extends Component {
   render() {
     const { value, onClick } = this.props;
     return (
-      <button
-        className="square"
-        onClick={onClick}
-        style={{ width: 60, height: 80, margin: 2, fontSize: 25 }}
-      >
+      <button className="square" onClick={onClick}>
         <p>{value} &nbsp;</p>
       </button>
     );
